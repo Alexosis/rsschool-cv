@@ -1,0 +1,76 @@
+aside{
+    display: block;
+    background-color: aliceblue;
+}
+
+body{
+    background-color:  lightblue
+}
+
+.side-info{
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.photo{
+    width: 100%;
+    box-shadow: -5px 5px #999;
+}
+
+.hh-link{
+    color: black;
+    text-decoration: none;
+}
+
+.left-side{
+    width: 40%;
+}
+
+.vertical-line{
+    border-left: 3px solid  lightblue;
+}
+
+.right-side{
+    width: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    box-shadow: -8px 10px darkgray;
+    max-width: 800px;
+    margin: auto;
+}
+
+.side-list{
+    list-style-type: none;
+    margin: 0;
+}
+
+ul.side-list{
+    background-color: lightgray;
+    margin-left: 2rem;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.side-list h4{
+    padding: 1px;
+    margin: 1px;
+}
+
+ul.side-list li{
+    padding: 2px;
+}
+
+section {
+    text-align: justify;
+    font-family: "Arial", sans-serif;
+}
+
+footer {
+    background-color: gray;
+}

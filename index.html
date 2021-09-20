@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Molchanov Alexey</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="left-side">
+        <section class="side-info">
+            <h1>Molchanov Alexey</h1>
+            <figure class="profile-photo">
+                <img class="photo" src="public/573780748.png" alt="photo of handsome guy">
+            </figure>
+            <ul class="side-list">
+                <h2>Contacts</h2>
+                <li><h4>Tel: 8(977)308-99-30</h4></li>
+                <li><h4>E-mail: alexii_mol@mail.ru</h4></li>
+            <li>
+                <h4><a class="hh-link" href="https://hh.ru/resume/7b158401ff07a57eb30039ed1f733942374b39">
+                hh.ru cv (click here)
+                </a></h4>
+            </li>
+            </ul>
+        </section>
+        <section class="side-info">
+            <ul class="side-list">
+                <h4>Education:</h4>
+                <li> Bachelor at Technical System Control</li>
+                <li> Certificate of successful completion of the SAS Analytics courses</li>
+                <li> Certificate of successful completion of Linux Administration courses</li>
+            </ul>
+        </section>
+        <section class="side-info">
+            <ul class="side-list">
+                <h4>Skills:</h4>
+                <li>Vanila JS</li>
+                <li>HTML, CSS</li>
+                <li>Vue.js, React.js</li>
+                <li>Golang</li>
+                <li>Python</li>
+                <li>Linux</li>
+            </ul>
+        </section>
+        <section>
+            <ul class="side-list">
+                <h4>Languages:</h4>
+                <li>English: B2</li>
+                <li>German: A1</li>
+            </ul>
+        </section>
+    </aside>
+    <div class="vertical-line"></div>
+    <article class="right-side">
+        <section>
+            <h4>General information:</h4>
+            <a>
+                <p>The first-year student at BMSTU at the "Information processing and management systems" masters
+                    program.</p>
+                <p>I take part in different students activities, like organizing some events, have experienced the
+                    organisation of events for foreign students with European students organisation.</p>
+                <p> Now I work as a system administrator at my university and help people to deal with Linux OS. </p>
+                <p> In my free time, I like to learn to play the guitar, explore some interesting technologies and news
+                    at the IT world.</p>
+            </a>
+        </section>
+        <section>
+            <h4>Code example:</h4>
+            Initial part for the game "Life"
+            <pre><code class="html">
+let method = process.argv[2];
+let path = process.argv[3];
+
+switch (method) {
+    case '-F':
+        try {
+            fileInit()
+        } catch (err) {
+            console.error(err);
+        }
+        break;
+    case '-R':
+    default:
+        randomInit();
+        break;
+}
+
+function fileInit() {
+    if (path === undefined) {
+        path = 'input.txt';
+    }
+    const fs = require("fs");
+    let fileContent = fs.readFileSync(path, "utf8");
+    let lines = fileContent.split('\r\n');
+    let items;
+    let status = [];
+    let height = lines.length;
+    let width = lines[0].split(' ').length;
+
+    if(width<2 || height<2){
+        throw new SyntaxError('Wrong input! Board size is too small!')
+    }
+
+
+    for (let iLines = 0; iLines < lines.length; iLines++) {
+        items = lines[iLines].split(' ').map(item => +item);
+        if (width !== items.length) {
+            throw new SyntaxError('Wrong input! Length  of rows is different!');
+        }
+
+        width = items.length;
+        status.push(items);
+    }
+
+    if (!status.flat().every(elem => elem === 1 || elem === 0)) {
+        throw new SyntaxError('Wrong input! File has incorrect values!');
+    }
+
+    setInterval(life, 1000, status, height, width);
+}
+
+function randomInit() {
+    const height = Math.floor(Math.random() * 5) + 5,
+        width = Math.floor(Math.random() * 2) + 5;
+    let status = Array.from({length: height}, () =>
+        Array.from({length: width}, () => Math.round(Math.random())));
+    setInterval(life, 1000, status, height, width);
+}
+}</code></pre>
+        </section>
+    </article>
+</div>
+
+<!--<footer>-->
+<!--    github.com/Alexosis-->
+<!--    2021-->
+<!--    <a href="https://rs.school/">-->
+<!--        <img src="rs_school_js.svg" alt="RS SCHOOL LOGO">-->
+<!--    </a>-->
+<!--</footer>-->
+</body>
+</html>
