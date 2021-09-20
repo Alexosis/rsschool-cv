@@ -1,1 +1,1 @@
-https://Alexosis.github.io/rsschool-cv/cv
+https://Alexosis.github.io/rsschool-cv/
