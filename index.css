@@ -39,10 +39,13 @@ body{
 
 .container{
     background-color: white;
-    display: flex;
     box-shadow: -8px 10px darkgray;
     max-width: 800px;
     margin: auto;
+}
+
+.main-part{
+    display: flex;
 }
 
 .side-list{
@@ -72,5 +75,21 @@ section {
 }
 
 footer {
-    background-color: gray;
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item{
+    max-height: 40px;
+    width: 33%;
+    text-align: center;
+}
+
+.footer-item img{
+    width: 100px;
+}
+
+.GitHub-link{
+    color: black;
 }
